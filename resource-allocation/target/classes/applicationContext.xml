@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder
+		location="classpath:com/leantaas/assignment/database/connection.properties" />
+	<!-- <bean id="dbConfig" class="com.leantaas.assignment.database.DBConfig">
+		<property name="dbDriver" value="${DB_DRIVER}" />
+		<property name="dbUser" value="${DB_USER}" />
+		<property name="dbName" value="${DB_NAME}" />
+		<property name="dbUrl" value="${DB_URL}" />
+		<property name="dbPassword" value="${DB_PASSWORD}" />
+	</bean> -->
+	<bean id="projectorBo" class="com.leantaas.assignment.boImpl.ProjectorBoImpl"
+		autowire="default" />
+	<bean id="teamBo" class="com.leantaas.assignment.boImpl.TeamBoImpl"
+		autowire="default" />
+	<bean id="projectorAssignmentBo"
+		class="com.leantaas.assignment.boImpl.ProjectorAssignmentBoImpl"
+		autowire="default" />
+	<bean id="projectorAssignmentDao"
+		class="com.leantaas.assignment.daoImpl.ProjectorAssignmentDaoImpl"
+		autowire="default" />
+	<bean id="projectorDao" class="com.leantaas.assignment.daoImpl.ProjectorDaoImpl"
+		autowire="default" />
+	<bean id="teamDao" class="com.leantaas.assignment.daoImpl.TeamDaoImpl"
+		autowire="default" />
+
+	<context:annotation-config />
+</beans>  
