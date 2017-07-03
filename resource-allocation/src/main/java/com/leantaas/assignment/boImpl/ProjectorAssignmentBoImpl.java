@@ -20,7 +20,7 @@ import com.leantaas.assignment.utility.ConstantValues;
 import com.leantaas.assignment.utility.DateOperations;
 
 public class ProjectorAssignmentBoImpl implements ProjectorAssignmentBo{
-
+	
 	@Autowired
 	TeamBo teamBo;
 	@Autowired
