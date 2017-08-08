@@ -6,8 +6,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:property-placeholder
-		location="classpath:com/leantaas/assignment/database/connection.properties" />
+	<!-- <context:property-placeholder
+		location="classpath:com/leantaas/assignment/database/connection.properties" /> -->
 	<!-- <bean id="dbConfig" class="com.leantaas.assignment.database.DBConfig">
 		<property name="dbDriver" value="${DB_DRIVER}" />
 		<property name="dbUser" value="${DB_USER}" />
@@ -24,7 +24,7 @@
 		autowire="default" />
 	<bean id="projectorAssignmentDao"
 		class="com.leantaas.assignment.daoImpl.ProjectorAssignmentDaoImpl"
-		autowire="default" />
+		autowire="ByName" />
 	<bean id="projectorDao" class="com.leantaas.assignment.daoImpl.ProjectorDaoImpl"
 		autowire="default" />
 	<bean id="teamDao" class="com.leantaas.assignment.daoImpl.TeamDaoImpl"
